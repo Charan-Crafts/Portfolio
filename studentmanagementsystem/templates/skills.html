@@ -1,0 +1,116 @@
+<!-- skills.html -->
+{% extends 'navbar.html' %}
+{% block skills %}
+<h1>My Skills</h1>
+<div class="skills-container">
+    <div class="skill">
+        <label for="python">Python</label>
+        <div class="progress-bar">
+            <div class="progress" id="python" style="width: 90%;"></div>
+        </div>
+        <span>90%</span>
+    </div>
+    <div class="skill">
+        <label for="mysql">MySQL</label>
+        <div class="progress-bar">
+            <div class="progress" id="mysql" style="width: 65%;"></div>
+        </div>
+        <span>65%</span>
+    </div>
+    <div class="skill">
+        <label for="django">Django</label>
+        <div class="progress-bar">
+            <div class="progress" id="django" style="width: 70%;"></div>
+        </div>
+        <span>70%</span>
+    </div>
+    <div class="skill">
+        <label for="html">HTML</label>
+        <div class="progress-bar">
+            <div class="progress" id="html" style="width: 80%;"></div>
+        </div>
+        <span>80%</span>
+    </div>
+    <div class="skill">
+        <label for="css">CSS</label>
+        <div class="progress-bar">
+            <div class="progress" id="css" style="width: 75%;"></div>
+        </div>
+        <span>75%</span>
+    </div>
+    <div class="skill">
+        <label for="javascript">JavaScript</label>
+        <div class="progress-bar">
+            <div class="progress" id="javascript" style="width: 85%;"></div>
+        </div>
+        <span>70%</span>
+    </div>
+    
+</div>
+
+<style>
+    .skills-container {
+        height: auto;
+        width: 60vw;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        overflow-y: auto;
+        background-color: #282c34;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #61dafb;
+    }
+
+    .skill {
+        margin: 15px 0;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #ffffff;
+    }
+
+    .progress-bar {
+        width: 100%;
+        background-color: #444;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress {
+        height: 25px;
+        background-color: #61dafb;
+        border-radius: 5px;
+        transition: width 0.5s ease;
+    }
+
+    span {
+        display: inline-block;
+        margin-top: 5px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const skills = document.querySelectorAll('.progress');
+
+        skills.forEach(skill => {
+            const percentage = skill.style.width; 
+            skill.style.width = '0%'; 
+            setTimeout(() => {
+                skill.style.width = percentage; 
+            }, 100);
+        });
+    });
+</script>
+{% endblock %}

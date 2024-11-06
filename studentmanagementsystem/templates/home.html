@@ -1,0 +1,33 @@
+{% extends 'navbar.html' %}
+{%load static %}
+{% block home %}
+    <div class="home">
+        <div class="content">
+            <h1>Hi,</h1>
+            <h1>I'm <span style="color:orange">Charan</span></h1>
+            <p>
+                a passionate developer dedicated to creating innovative and efficient solutions for both local and global clients. My mission is to help businesses achieve their goals by delivering high-quality development services.
+            </p>
+            <div class='sociallinks'>
+                <button>
+                <i class="fa-brands fa-linkedin-in"></i>
+                </button>
+                <button>
+                <i class="fa-brands fa-github "></i>
+                </button>
+                <button>
+                <i class="fa-brands fa-instagram "></i>
+                </button>
+                <button>
+                <i class="fa-brands fa-facebook "></i>
+                </button>
+                </div>
+                <div class="resume">
+                    <button>View CV</button>
+                </div>
+        </div>
+        <div class="image">
+            <img src="{%static 'images/profile.jpg'%}" alt="Home Image" id="profile">
+        </div>
+    </div>
+{% endblock %}
